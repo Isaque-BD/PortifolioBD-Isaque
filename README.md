@@ -264,12 +264,12 @@ Em resumo, o script automatiza a **estrutura temporal de um curso** ao adicionar
     planilha.save('infodados.xlsx')
     print("\n----Data de início, fim do curso e ciclos adicionados com sucesso!!----")
 
-planilha = openpyxl.load_workbook('infodados.xlsx')
-
-while True:
-    print("\nOpções:")
-    print("\n1. Adicionar data de início do curso e criar ciclos")
-    print("2. Sair do programa", "\n")
+	planilha = openpyxl.load_workbook('infodados.xlsx')
+	
+	while True:
+	    print("\nOpções:")
+	    print("\n1. Adicionar data de início do curso e criar ciclos")
+	    print("2. Sair do programa", "\n")
 
     escolha = input("Escolha uma das opções: ")
 
