@@ -2,7 +2,7 @@
 
 
 ## Introdução
-Começando pela minha formação, estou cursando Banco de Dados, na qual eu me ingressei no segundo semestre de 2023, atualmente estou atuando na área de análise de dados na minha profissão, na J&J. As as tecnologias de Python, SQL, AWS(Databricks), para realizar querys, SAP ERP, Power BI e Excel, com o conjunto dessas ferramentas desenvolvo ETL para melhoria dos fluxo de dados, e também gerando reports de produtividade, disponibilidade e performance de máquina para que possa ser tomada descisões de melhorias contínuas nos processos de fabricação.
+Estou cursando Banco de Dados desde o segundo semestre de 2023 e atualmente atuo como analista de dados na Johnson & Johnson. No dia a dia, trabalho com tecnologias como Python, SQL, AWS (Databricks), SAP ERP, Power BI e Excel para desenvolver pipelines de ETL, otimizando o fluxo e a qualidade dos dados. Além disso, elaboro relatórios de produtividade, disponibilidade e performance de máquinas, fornecendo insumos estratégicos para a tomada de decisões e a promoção de melhorias contínuas nos processos de fabricação.
 
 ## Contatos
 <a href="https://www.linkedin.com/in/seu-usuario" target="_blank">
