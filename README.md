@@ -333,7 +333,7 @@ Aprendi a estrutura de um sistema simples de CRUD e como funciona a integração
 
 A GSW Soluções Integradas propôs o desafio de desenvolver uma página web para análises estratégicas com foco em histórico de informações. O sistema utiliza dados de outros sites (portais de notícias, por exemplo) para realizar previsões conforme a necessidade do usuário — como análise do crescimento de criptomoedas com base em notícias ou previsão do tempo.
 
-**Repositório:** [Morpheus — GSW Soluções Integradas](https://github.com/Morpheus-Fatec/morpheus/tree/main)
+**Repositório:** [Morpheus — GSW Soluções Integradas](https://github.com/Isaque-BD/FATEC-API-4-SEMESTRE)
 
 ### Tecnologias Utilizadas
 
