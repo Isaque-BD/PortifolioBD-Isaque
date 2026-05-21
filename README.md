@@ -19,46 +19,12 @@ Java · Spring Boot · SQL
 
 | Semestre | Ano | Projeto |
 |----------|-----|---------|
-| [1º Semestre](#1º-semestre--2023) | 2023 | Introdução à Programação |
-| [2º Semestre](#2º-semestre--2023) | 2023 | PBLTeX — Sistema de Gestão Acadêmica |
-| [3º Semestre](#3º-semestre--2024) | 2024 | Análise de Climas de Regiões |
-| [4º Semestre](#4º-semestre--2024) | 2024 | GSW Soluções Integradas |
+| [1º Semestre](#2º-semestre--2023) | 2023 | PBLTeX — Sistema de Gestão Acadêmica |
+| [2º Semestre](#3º-semestre--2024) | 2024 | Análise de Climas de Regiões |
+| [3º Semestre](#4º-semestre--2024) | 2024 | GSW Soluções Integradas |
 
 ---
-
 ## 1º Semestre · 2023
-
-**Tema:** Introdução à Programação
-
-Semestre inicial do curso de Banco de Dados, com foco nos fundamentos de algoritmos e lógica de programação, além do aprendizado das primeiras ferramentas de desenvolvimento colaborativo.
-
-### Tecnologias Utilizadas
-
-- **Python** — Lógica e estrutura de algoritmos
-- **Trello** — Gerenciamento de tarefas
-- **GitHub** — Versionamento de código
-
-### Aprendizados Efetivos
-
-Nesse semestre aprendi os conceitos de algoritmos e como utilizar o GitHub para versionamento do código.
-
-### Hard Skills
-
-| Tecnologia/Metodologia | Nota | Classificação |
-|------------------------|------|---------------|
-| Python | ★★☆☆☆ | Sei fazer com ajuda |
-| GitHub | ★★★☆☆ | Entendi |
-
-### Soft Skills
-
-| Habilidade | Descrição |
-|------------|-----------|
-| Conhecimento | Tive bastante autonomia para realizar minhas tasks, fazendo bastante pesquisas para cada dúvida que tive. |
-| Comunicação | No grupo tivemos conflitos devido ao desbalanceamento na atuação prática de cada um, tendo alguns fazendo mais que os outros. |
-
----
-
-## 2º Semestre · 2023
 
 **Tema:** PBLTeX — Sistema de Gestão Acadêmica
 
