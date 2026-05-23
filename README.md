@@ -26,9 +26,33 @@ Java · Spring Boot · SQL
 ---
 ## 1º Semestre · 2/2023
 
+## 🎯 Desafio Proposto
+ 
 **Tema:** PBLTeX — Sistema de Gestão Acadêmica
+ 
+A instituição **PBLTeX** nos desafiou a desenvolver um sistema de gestão acadêmica capaz de suportar sua metodologia diferenciada de ensino baseada em PBL (Problem Based Learning).
+ 
+O sistema precisava contemplar diferentes níveis de permissão — **administrador**, **professor** e **aluno** — cada um com acesso restrito às suas respectivas funcionalidades. Entre as principais demandas estavam: criação de turmas, cadastro de alunos, formação de grupos e registro de notas por ciclo de entrega.
 
-O desafio proposto foi desenvolver um sistema para uma instituição de ensino com diferentes níveis de permissão (admin, professor e aluno), cada um com acesso limitado. O sistema permite criar turmas, cadastrar alunos, criar grupos e definir notas por ciclo.
+## 💡 Solução Desenvolvida
+ 
+Para atender ao desafio proposto pela PBLTeX, desenvolvemos um **Sistema de Informação Acadêmica** voltado à gestão completa do método PBL, permitindo o acompanhamento dos ciclos de entrega, scores parciais e o cálculo do FEE (Fator de Ensino Evolutivo) de cada aluno.
+ 
+O sistema foi construído em **Python**, com interface via terminal e seu armazenamento de dados via uma planilha do Excel, e utilizamos o **GitHub** para versionamento e controle colaborativo do código entre os membros da equipe.
+ 
+### Funcionalidades entregues
+ 
+O sistema contempla o controle de turmas, grupos e alunos, permitindo que o administrador organize o ambiente acadêmico de forma estruturada. Ao longo das sprints, foram implementadas as seguintes entregas:
+ 
+- **Sprint 1** — Cadastro de alunos e professores, criação de turmas e definição dos ciclos de entrega
+- **Sprint 2** — Encerramento de turmas e criação de grupos dentro das salas
+- **Sprint 3** — Atribuição de scores e feedbacks pelos professores, além de geração de listagem de alunos
+- **Sprint 4** — Menu centralizado de funcionalidades e exportação de relatórios por turma
+### Diferenciais da solução
+ 
+A solução foi projetada para refletir a lógica do método PBL: cada ciclo de entrega registra scores parciais que, ao final do curso, são consolidados no cálculo do FEE. Isso garante à instituição visibilidade contínua sobre a evolução dos alunos, sem depender de avaliações pontuais.
+ 
+A exportação de dados consolidados permite que coordenadores e professores tomem decisões baseadas em métricas reais de desempenho ao longo do semestre.
 
 **Repositório:** [API-Porygon](https://github.com/Isaque-BD/API-Porygon)
 
@@ -105,6 +129,8 @@ df_selecao = filtrar_dataframe(df_turma, alunos_selecionados, selected_ciclo)
 criar_graficos(df_selecao, selected_ciclo)
 st.dataframe(df_selecao)
 ```
+https://github.com/Porygon-Users/API-Porygon/assets/145280630/2fc32e39-2c54-49bb-af2e-1423dacb13fe
+
 
 </details>
 
@@ -144,12 +170,13 @@ def adicionar_data_e_ciclos(planilha, turma_destino):
     planilha.save('infodados.xlsx')
     print("Datas e ciclos adicionados com sucesso!")
 ```
+https://github.com/Porygon-Users/API-Porygon/assets/143560101/c06cee20-d000-4dc9-b9e0-07aa02b22cb4
 
 </details>
 
 ### Aprendizados Efetivos
 
-Aprendi os conceitos de algoritmos e como utilizar o GitHub para versionamento do código.
+Neste semestre tive meu primeiro contato com desenvolvimento de software, utilizando Python como linguagem principal. Trabalhando em grupo, aprendemos a utilizar o GitHub para versionamento de código e controle da aplicação.
 
 ### Hard Skills
 
