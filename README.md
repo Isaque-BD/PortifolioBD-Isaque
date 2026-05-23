@@ -19,12 +19,12 @@ Java · Spring Boot · SQL
 
 | Semestre | Ano | Projeto |
 |----------|-----|---------|
-| [1º Semestre](#1º-semestre--2023) | 2023 | PBLTeX — Sistema de Gestão Acadêmica |
-| [2º Semestre](#2º-semestre--2024) | 2024 | Análise de Climas de Regiões |
-| [3º Semestre](#3º-semestre--2024) | 2024 | GSW Soluções Integradas |
+| [1º Semestre](#1º-semestre--22023) | 2023 | PBLTeX — Sistema de Gestão Acadêmica |
+| [2º Semestre](#2º-semestre--12024) | 2024 | Análise de Climas de Regiões |
+| [3º Semestre](#3º-semestre--22024) | 2024 | GSW Soluções Integradas |
 
 ---
-## 1º Semestre · 2023
+## 1º Semestre · 2/2023
 
 **Tema:** PBLTeX — Sistema de Gestão Acadêmica
 
@@ -167,7 +167,7 @@ Aprendi os conceitos de algoritmos e como utilizar o GitHub para versionamento d
 
 ---
 
-## 2º Semestre · 2024
+## 2º Semestre · 1/2024
 
 **Tema:** Análise de Climas de Regiões
 
@@ -293,7 +293,7 @@ Aprendi a estrutura de um sistema simples de CRUD e como funciona a integração
 
 ---
 
-## 3º Semestre · 2024
+## 3º Semestre · 2/2024
 
 **Tema:** GSW Soluções Integradas — Análise Estratégica com Web Data
 
