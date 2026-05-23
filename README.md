@@ -19,9 +19,9 @@ Java · Spring Boot · SQL
 
 | Semestre | Ano | Projeto |
 |----------|-----|---------|
-| [1º Semestre](#2º-semestre--2023) | 2023 | PBLTeX — Sistema de Gestão Acadêmica |
-| [2º Semestre](#3º-semestre--2024) | 2024 | Análise de Climas de Regiões |
-| [3º Semestre](#4º-semestre--2024) | 2024 | GSW Soluções Integradas |
+| [1º Semestre](#1º-semestre--2023) | 2023 | PBLTeX — Sistema de Gestão Acadêmica |
+| [2º Semestre](#2º-semestre--2024) | 2024 | Análise de Climas de Regiões |
+| [3º Semestre](#3º-semestre--2024) | 2024 | GSW Soluções Integradas |
 
 ---
 ## 1º Semestre · 2023
@@ -167,7 +167,7 @@ Aprendi os conceitos de algoritmos e como utilizar o GitHub para versionamento d
 
 ---
 
-## 3º Semestre · 2024
+## 2º Semestre · 2024
 
 **Tema:** Análise de Climas de Regiões
 
@@ -277,9 +277,9 @@ Aprendi a estrutura de um sistema simples de CRUD e como funciona a integração
 
 | Tecnologia/Metodologia | Nota | Classificação |
 |------------------------|------|---------------|
-| Java | ★★★☆☆ | Sei fazer com ajuda |
+| Java | ★★☆☆☆ | Sei fazer com ajuda |
 | PostgreSQL | ★★★☆☆ | Entendi |
-| GitHub | ★★★☆☆ | Sei fazer com ajuda |
+| GitHub | ★★★★☆ | Autonomia |
 | SceneBuilder | ★★★☆☆ | Entendi |
 | JavaFX | ★★★☆☆ | Entendi |
 
@@ -293,7 +293,7 @@ Aprendi a estrutura de um sistema simples de CRUD e como funciona a integração
 
 ---
 
-## 4º Semestre · 2024
+## 3º Semestre · 2024
 
 **Tema:** GSW Soluções Integradas — Análise Estratégica com Web Data
 
@@ -399,7 +399,7 @@ CREATE TABLE Data_collected_api (
 |------------------------|------|---------------|
 | Java | ★★★★☆ | Autonomia |
 | MySQL | ★★★☆☆ | Entendi |
-| Vue | ★★★☆☆ | Sei fazer com ajuda |
+| Vue | ★★☆☆☆ | Sei fazer com ajuda |
 | GitHub | ★★★★☆ | Autonomia |
 
 ### Soft Skills
