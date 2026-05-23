@@ -196,10 +196,34 @@ Neste semestre tive meu primeiro contato com desenvolvimento de software, utiliz
 
 ## 2º Semestre · 1/2024
 
+## 🎯 Desafio Proposto
+
 **Tema:** Análise de Climas de Regiões
 
-O desafio proposto foi desenvolver uma aplicação para análise de climas de regiões (temperatura, umidade), possibilitando calcular médias de períodos para apoio à tomada de decisões — como, por exemplo, escolher o que plantar em uma fazenda para determinada região.
+A instituição nos desafiou a desenvolver um **Sistema de Banco de Dados** capaz de receber arquivos CSV contendo dados meteorológicos de estações de monitoramento, validar seu conteúdo e gerar relatórios climáticos.
 
+O desafio central estava na diversidade dos dados: diferentes estações de uma mesma cidade podiam apresentar formatos distintos de arquivo, exigindo leitura, validação e armazenamento estruturado das variáveis climáticas separadamente. Registros suspeitos — como temperaturas fora de faixas aceitáveis — precisavam ser isolados para revisão manual antes de entrar na base principal.
+
+## 💡 Solução Desenvolvida
+ 
+Para atender ao desafio proposto, desenvolvemos um **sistema desktop em Java** com conexão a banco de dados relacional via JDBC, capaz de importar, validar e processar arquivos CSV de estações meteorológicas do estado de SP.
+ 
+O sistema foi estruturado para armazenar cada variável climática de forma independente — temperatura, umidade e demais medições em registros separados — garantindo maior flexibilidade na geração de relatórios e análises.
+ 
+### Funcionalidades entregues
+ 
+Ao longo das quatro sprints, o sistema evoluiu progressivamente:
+ 
+- **Sprint 1** — Leitura e interpretação de arquivos CSV com dados meteorológicos
+- **Sprint 2** — Geração de relatório de médias climáticas por cidade e período, e relatório de situação com os valores mais recentes por cidade
+- **Sprint 3** — Geração de relatório para plotagem de gráfico boxplot e gerenciamento de valores limite para identificação de registros suspeitos
+- **Sprint 4** — Tratamento de registros suspeitos com opção de correção ou exclusão, além da gestão de cidades, estações e unidades de medida
+### Diferenciais da solução
+ 
+Um dos pontos centrais foi o mecanismo de **validação automática** dos dados importados: registros fora dos limites configuráveis — como temperaturas acima de 60°C ou abaixo de -20°C — eram isolados em uma base separada para revisão manual, evitando que dados inconsistentes contaminassem os relatórios principais.
+ 
+O projeto também foi documentado com manual de usuário, diagrama entidade-relacionamento e instruções de instalação, e todo o desenvolvimento foi versionado com **Git** para controle colaborativo do código.
+ 
 **Repositório:** [API-2-semestre](https://github.com/Isaque-BD/API-2-semestre)
 
 ### Tecnologias Utilizadas
