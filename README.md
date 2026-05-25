@@ -182,8 +182,8 @@ Neste semestre tive meu primeiro contato com desenvolvimento de software, utiliz
 
 | Tecnologia/Metodologia | Nota | Classificação |
 |------------------------|------|---------------|
-| Python | ★★☆☆☆ | Sei fazer com ajuda |
-| GitHub | ★★★☆☆ | Entendi |
+| Python | ★★★☆ | Sei fazer com ajuda |
+| GitHub | ★★★★ | Autonomia |
 
 ### Soft Skills
 
@@ -322,17 +322,17 @@ public class Metric {
 
 ### Aprendizados Efetivos
 
-Aprendi a estrutura de um sistema simples de CRUD e como funciona a integração entre banco de dados e aplicação.
+Aprendi a estrutura de um sistema simples de CRUD e como funciona a integração entre banco de dados e a aplicação.
 
 ### Hard Skills
 
 | Tecnologia/Metodologia | Nota | Classificação |
 |------------------------|------|---------------|
-| Java | ★★☆☆☆ | Sei fazer com ajuda |
-| PostgreSQL | ★★★☆☆ | Entendi |
-| GitHub | ★★★★☆ | Autonomia |
-| SceneBuilder | ★★★☆☆ | Entendi |
-| JavaFX | ★★★☆☆ | Entendi |
+| Java | ★★☆☆ | Entendi |
+| PostgreSQL | ★★★☆ | Sei fazer com ajuda |
+| GitHub | ★★★★ | Autonomia |
+| SceneBuilder | ★★★☆ | Sei fazer com ajuda |
+| JavaFX | ★★★☆ | Sei fazer com ajuda |
 
 ### Soft Skills
 
@@ -346,11 +346,37 @@ Aprendi a estrutura de um sistema simples de CRUD e como funciona a integração
 
 ## 3º Semestre · 2/2024
 
-**Tema:** GSW Soluções Integradas — Análise Estratégica com Web Data
+## 🎯 Desafio Proposto
+ 
+**Tema:** GSW Soluções Integradas — Captura e Armazenamento de Notícias Estratégicas
+ 
+A empresa **GSW** nos desafiou a desenvolver uma ferramenta web para captura, armazenamento e consulta de notícias estratégicas provenientes de portais de notícias e APIs externas. O problema central estava na dificuldade de monitorar e consolidar informações dispersas em múltiplas fontes, de forma rotineira e estruturada.
+ 
+O sistema precisava realizar web scraping de portais cadastrados, tratar variações linguísticas como regionalismos e sinônimos por meio de tags, e preparar a base de dados para uma futura aplicação de inteligência artificial e machine learning para cruzamento e análise estratégica dos dados.
+ 
+---
+ 
+## 💡 Solução Desenvolvida
+ 
+Para atender ao desafio, desenvolvemos uma **aplicação web minimalista em Java** com mecanismo de web scraping para captura rotineira de notícias, sistema de tags com tratamento de sinônimos e regionalismos, e telas de consulta com filtros avançados.
+ 
+O sistema foi projetado para escalar com grandes volumes de notícias armazenadas, utilizando apenas softwares livres e documentação completa de API com OpenAPI.
+ 
+### Funcionalidades entregues
+ 
+Ao longo das quatro sprints, o sistema evoluiu progressivamente:
+ 
+- **Sprint 1** — Gerenciamento de portais de notícias com cadastro de endereços e autores, e gerenciamento de tags com suporte a conteúdos textuais livres
+- **Sprint 2** — Tratamento de sinônimos de tags para contemplar regionalismos linguísticos e registro de dados provenientes dos portais via web scraping
+- **Sprint 3** — Consulta e filtragem de notícias por tags tratadas e por atributos do portal de origem
+- **Sprint 4** — Gerenciamento de fontes de dados via APIs externas, registro e consulta de dados provenientes dessas APIs com filtros por tags e atributos
+### Diferenciais da solução
+ 
+O principal diferencial foi o **tratamento de linguagem natural nas tags**: ao cadastrar sinônimos e variações regionais, o sistema conseguia identificar e relacionar notícias que tratavam do mesmo tema com terminologias diferentes, aumentando a precisão das consultas.
+ 
+A arquitetura foi pensada desde o início para suportar a futura camada de inteligência artificial, com histórico estruturado de capturas e modelo de banco de dados que facilita o cruzamento de informações entre notícias, portais, jornalistas e dados de APIs externas.
 
-A GSW Soluções Integradas propôs o desafio de desenvolver uma página web para análises estratégicas com foco em histórico de informações. O sistema utiliza dados de outros sites (portais de notícias, por exemplo) para realizar previsões conforme a necessidade do usuário — como análise do crescimento de criptomoedas com base em notícias ou previsão do tempo.
-
-**Repositório:** [Morpheus — GSW Soluções Integradas](https://github.com/Isaque-BD/FATEC-API-4-SEMESTRE)
+**Repositório:** [Morpheus — GSW Soluções Integradas](https://github.com/Isaque-BD/morpheus)
 
 ### Tecnologias Utilizadas
 
@@ -444,18 +470,282 @@ CREATE TABLE Data_collected_api (
 
 </details>
 
+### Aprendizados Efetivos
+Compreendi melhor os conceitos de Orientação objeto ao ponto de ter uma melhor autonomia ao desenvolver com Java, que comparado ao semestre anterior tive muito dificuldade para entender a estrutura para se desenvolver.
+
+
 ### Hard Skills
 
 | Tecnologia/Metodologia | Nota | Classificação |
 |------------------------|------|---------------|
-| Java | ★★★★☆ | Autonomia |
-| MySQL | ★★★☆☆ | Entendi |
-| Vue | ★★☆☆☆ | Sei fazer com ajuda |
-| GitHub | ★★★★☆ | Autonomia |
+| Java | ★★★★ | Autonomia |
+| MySQL | ★★★★ | Autonomia |
+| Vue | ★★☆☆ | Entendi |
+| GitHub | ★★★★ | Autonomia |
 
 ### Soft Skills
 
 | Habilidade | Descrição |
 |------------|-----------|
-| Comunicação | Fui desenvolvendo ao longo do projeto, perdendo o receio de perguntar dúvidas. |
+| Comunicação | Fui desenvolvendo ao longo do projeto, perdendo o receio de perguntar por dúvidas. |
 | Paciência | Mantive o controle em situações inesperadas sem me estressar, fundamental para o trabalho em equipe. |
+
+## 4º Semestre · 1/2025
+
+## 🎯 Desafio Proposto
+ 
+**Tema:** Visiona — Editor de Polígonos Geoespaciais
+ 
+A empresa **Visiona** nos desafiou a desenvolver um sistema web para análise e edição de dados geoespaciais voltado ao setor agrícola. O problema central estava na necessidade de revisar e corrigir classificações de talhões agrícolas geradas por modelos de inteligência artificial, que nem sempre produzem resultados precisos sem supervisão humana.
+ 
+O sistema precisava permitir que analistas e consultores visualizassem, editassem e exportassem polígonos em formato GeoJSON diretamente em um mapa interativo, com diferentes níveis de permissão para administradores, analistas e consultores.
+ 
+---
+ 
+## 💡 Solução Desenvolvida
+ 
+Para atender ao desafio, desenvolvemos uma **plataforma web** com mapa interativo para visualização e edição de talhões agrícolas em formato GeoJSON, integrada a dashboards de monitoramento de produtividade e métricas de qualidade das correções realizadas.
+ 
+O sistema foi estruturado com controle de permissões por perfil de usuário, garantindo que cada nível de acesso interagisse apenas com as funcionalidades pertinentes à sua função.
+ 
+### Funcionalidades entregues
+ 
+Ao longo das três sprints, o sistema evoluiu progressivamente:
+ 
+- **Sprint 1** — Cadastro de talhões via upload de GeoJSON, visualização em mapa interativo, filtros por atributos e exibição de informações detalhadas dos talhões
+- **Sprint 2** — Edição de polígonos no mapa, histórico de alterações, exportação dos talhões revisados em GeoJSON e dashboards com métricas de produtividade dos analistas
+- **Sprint 3** — Gerenciamento de usuários, atribuição de permissões por perfil e notificações sobre talhões pendentes de revisão
+### Diferenciais da solução
+ 
+Um dos principais diferenciais foi o **rastreamento completo das alterações**: cada edição realizada nos polígonos ficava registrada no histórico, permitindo auditoria e garantindo a rastreabilidade das correções feitas sobre as classificações da IA.
+ 
+Além disso, os dashboards ofereciam visibilidade em tempo real sobre o desempenho dos analistas — métricas de tempo, volume de edições e qualidade das revisões — contribuindo diretamente para o refinamento contínuo dos modelos de inteligência artificial utilizados no mapeamento agrícola.
+
+**Repositório:** [Morpheus — Visiona](https://github.com/Isaque-BD/FATEC-API-4-SEMESTRE)
+
+### Tecnologias Utilizadas
+
+- **Java** — Toda a lógica do projeto
+- **PostgreSQL** — Armazenamento e persistência dos dados geoespaciais
+- **PostGIS** — Suporte a dados espaciais e consultas geográficas
+- **Vue.js** — Interface para interação do usuário
+- **Leaflet** — Visualização e edição de mapas e polígonos
+- **GitHub** — Versionamento do projeto
+- **Maven** — Gerenciamento de dependências
+
+
+## Contribuições pessoais
+
+<details>
+<summary>Implementação da lógica de cálculo das métricas</summary>
+
+Fui responsável pela implementação da lógica de cálculo das métricas utilizadas nos dashboards, desenvolvida com **queries nativas em Java utilizando Spring Data JPA**. As consultas foram escritas diretamente em SQL com foco em **performance**, **precisão nos cálculos** e flexibilidade para filtros dinâmicos.
+
+### Qualidade das revisões
+Desenvolvimento de queries responsáveis por classificar cada correção conforme a quantidade de revisões realizadas:
+
+- **Ideal** — 1 revisão  
+- **Aceitável** — até 2 revisões  
+- **Ruim** — 3 ou mais revisões  
+
+Essas métricas podem ser analisadas tanto por **analista individual** quanto de forma consolidada para **toda a equipe**.
+
+### Desempenho dos analistas
+Implementação de consultas para cálculo da produtividade dos analistas com base em:
+
+- **Área revisada ÷ tempo gasto**
+- Área total **aprovada**
+- Área total **pendente**
+- Área total **rejeitada**
+
+Permitindo comparar desempenho individual e gerar indicadores médios da equipe.
+
+### Ciclo dos talhões
+Construção de query com múltiplos filtros dinâmicos para alimentar a tabela detalhada de acompanhamento operacional dos talhões, contendo:
+
+- tempo de análise
+- tempo de revisão
+- quantidade de interações
+- status atual
+- analista responsável
+- consultor responsável
+
+### Evolução mensal
+Implementação da consulta que compara a **área inicial classificada pela IA** com a **área final após revisão humana** nos últimos 3 meses.
+
+Essa informação é utilizada no dashboard para alimentar o gráfico de acompanhamento da **saúde da análise automática**, permitindo visualizar a diferença entre a classificação automática e o resultado final validado manualmente.
+
+## Exemplos de queries implementadas
+
+```java
+@Query(value = """
+    WITH revisoes_por_classificacao AS (
+        SELECT 
+            cc.id_controle_classificacao,
+            COUNT(rcm.id_revisao_classificacao_manual) AS total_revisoes
+        FROM controle_classificacao cc
+        LEFT JOIN revisao_classificacao_manual rcm 
+            ON cc.id_controle_classificacao = rcm.id_controle_classificacao
+        WHERE (:idAnalista IS NULL OR cc.id_analista = :idAnalista)
+        GROUP BY cc.id_controle_classificacao
+    )
+    SELECT
+        CASE
+            WHEN total_revisoes = 1 THEN 'Ideais'
+            WHEN total_revisoes <= 2 THEN 'Aceitaveis'
+            ELSE 'Ruim'
+        END AS classificacao_revisao,
+        COUNT(*) AS quantidade
+    FROM revisoes_por_classificacao
+    GROUP BY classificacao_revisao
+""", nativeQuery = true)
+List<Object[]> getQualityAnalysisByAnalyst(@Param("idAnalista") Long idAnalista);
+
+@Query(value = """
+    WITH analistas_data AS (
+        SELECT
+            cc.id_analista,
+            SUM(t.area) AS total_area_aprovada,
+            SUM(cc.time_spent_manual) AS total_tempo_gasto,
+            CASE
+                WHEN SUM(cc.time_spent_manual) = 0 THEN NULL
+                ELSE SUM(t.area) / SUM(cc.time_spent_manual)
+            END AS area_por_tempo
+        FROM controle_classificacao cc
+        JOIN talhoes t 
+            ON cc.id_talhao = t.id_talhao
+        WHERE t.estado = 'APPROVED'
+        GROUP BY cc.id_analista
+    )
+    SELECT COALESCE(AVG(area_por_tempo), 0)
+    FROM analistas_data
+""", nativeQuery = true)
+Double getAverageAnalystProductivity();
+
+@Query(value = """
+    WITH meses AS (
+        SELECT generate_series(
+            date_trunc('month', CURRENT_DATE) - interval '2 months',
+            date_trunc('month', CURRENT_DATE),
+            interval '1 month'
+        ) AS mes
+    ),
+    classificacoes_com_datas AS (
+        SELECT 
+            DATE_TRUNC('month', cc.date_time_created) AS mes,
+            cm.area AS area_inicial,
+            rcm.area_metros_quadrados AS area_final
+        FROM controle_classificacao cc
+        JOIN classificacao_manual cm 
+            ON cm.id_controle_classificacao = cc.id_controle_classificacao
+        LEFT JOIN LATERAL (
+            SELECT 
+                ST_Area(ST_Transform(coordenadas_destaque, 5880)) AS area_metros_quadrados
+            FROM revisao_classificacao_manual rcm
+            WHERE rcm.id_controle_classificacao = cc.id_controle_classificacao
+              AND coordenadas_destaque IS NOT NULL
+            ORDER BY rcm.id_revisao_classificacao_manual DESC
+            LIMIT 1
+        ) rcm ON TRUE
+        WHERE cc.date_time_created >= date_trunc('month', CURRENT_DATE) - interval '2 months'
+    )
+    SELECT 
+        TO_CHAR(m.mes, 'YYYY-MM') AS month,
+        COALESCE(SUM(c.area_inicial), 0) AS initial_area,
+        COALESCE(SUM(c.area_final), 0) AS final_area
+    FROM meses m
+    LEFT JOIN classificacoes_com_datas c 
+        ON m.mes = c.mes
+    GROUP BY m.mes
+    ORDER BY m.mes
+""", nativeQuery = true)
+List<Object[]> findMonthlyAreaData();
+```
+![alt text](image.png)
+</details>
+
+<details>
+<summary>Endpoints para operações de talhões</summary>
+
+Implementei os endpoints de atualização e download de talhões, envolvendo criação de DTOs, reestruturação de respostas e correções de tipos. As principais mudanças foram:
+
+**Download em GeoJSON — formato MANUAL**
+
+Criação do `ManualDTO` representando a coleção de features da classificação manual, e do `FieldPropertiesManualDto` com mapeamento das propriedades para os nomes esperados pelo padrão GeoJSON da Visiona (`NM_TL`, `AREA_M2`, `CLASSE`):
+
+```java
+public class ManualDTO {
+    private final String type = "FeatureCollection";
+    private final String name = "MAPA_CLASSIF_MANUAL";
+    private CrsDto crs;
+    private List<FeatureManualDto> features;
+}
+```
+
+```java
+@JsonPropertyOrder({ "NM_TL", "AREA_M2", "CLASSE" })
+public class FieldPropertiesManualDto {
+
+    @JsonProperty("NM_TL")
+    private String fieldName;
+
+    @JsonProperty("AREA_M2")
+    private BigDecimal area;
+
+    @JsonProperty("CLASSE")
+    private String classe;
+}
+```
+
+</details>
+</details>
+<details>
+<summary>Filtros e buscas de talhões</summary>
+Implementei o backend de filtros dinâmicos para a listagem de talhões no mapa, permitindo que o front-end filtre por nome, solo, status, cultura, safra e fazenda via query params opcionais.
+ 
+A query no repositório foi atualizada para aceitar os parâmetros com `COALESCE`, ignorando automaticamente filtros não informados:
+ 
+```java
+WHERE
+  (COALESCE(:nome, '') = '' OR LOWER(t.nome) LIKE LOWER(CONCAT('%', :nome, '%'))) AND
+  (COALESCE(:soil, '') = '' OR LOWER(so.nome) LIKE LOWER(CONCAT('%', :soil, '%'))) AND
+  (COALESCE(:status, '') = '' OR LOWER(t.estado) LIKE LOWER(CONCAT('%', :status, '%'))) AND
+  (COALESCE(:culture, '') = '' OR LOWER(c.nome) LIKE LOWER(CONCAT('%', :culture, '%'))) AND
+  (COALESCE(:harvest, '') = '' OR LOWER(t.safra) LIKE LOWER(CONCAT('%', :harvest, '%'))) AND
+  (COALESCE(:farmName, '') = '' OR LOWER(fa.nome) LIKE LOWER(CONCAT('%', :farmName, '%')))
+```
+ 
+O controller foi ajustado para receber todos os parâmetros como `@RequestParam(required = false)`, mantendo a compatibilidade com chamadas sem filtro:
+ 
+```java
+@GetMapping("/featureCollectionSimple")
+public ResponseEntity<FeatureCollectionSimpleDTO> getAllFeatureCollectionSimpleDTO(
+    @RequestParam(required = false) String name,
+    @RequestParam(required = false) String soil,
+    @RequestParam(required = false) String status,
+    @RequestParam(required = false) String culture,
+    @RequestParam(required = false) String harvest,
+    @RequestParam(required = false) String farmName
+) {
+    FeatureCollectionSimpleDTO featureCollection = fieldService.getAllFeatureCollectionSimpleDTO(
+        name, soil, status, culture, harvest, farmName
+    );
+    return ResponseEntity.ok(featureCollection);
+}
+```
+ ![alt text](image-1.png)
+</details>
+
+### Aprendizados Efetivos
+
+
+
+
+### Hard Skills
+| Tecnologia/Metodologia | Nota | Classificação |
+|------------------------|------|---------------|
+| Java | ★★★★ | Autonomia |
+| PostgreSQL | ★★★★ | Autonomia |
+| GitHub | ★★★★ | Autonomia |
+| Vue | ★★☆☆ | Entendi |
+| JavaFX | ★★★☆ | Sei fazer com ajuda |
