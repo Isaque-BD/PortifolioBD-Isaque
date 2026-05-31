@@ -737,9 +737,7 @@ public ResponseEntity<FeatureCollectionSimpleDTO> getAllFeatureCollectionSimpleD
 </details>
 
 ### Aprendizados Efetivos
-
-
-
+Nesse semestre o foco principal da API foi na parte de desenvolvimento do Front End, que é uma parte não muito do meu interesse no desenvolvimento, ao ponto de eu ficar apenas focado na parte do Back-End neste projeto e não ter nenhum envolvimento no Front-End ao decorrer do projeto. Minhas únicas interações na parte do Front foi durante as aulas de Laboratório com o professor Mineda, na qual eu entendi um pouco a parte de integração do Back com o Front, que até então não era de meu conhecimento. 
 
 ### Hard Skills
 | Tecnologia/Metodologia | Nota | Classificação |
@@ -749,3 +747,11 @@ public ResponseEntity<FeatureCollectionSimpleDTO> getAllFeatureCollectionSimpleD
 | GitHub | ★★★★ | Autonomia |
 | Vue | ★★☆☆ | Entendi |
 | JavaFX | ★★★☆ | Sei fazer com ajuda |
+
+### Soft Skills
+
+| Habilidade | Descrição |
+|------------|-----------|
+| Proatividade | Durante a API eu poderia ser mais proativo na realização das issues, mas como meu receio era muito grande por ser tasks relacionadas a Front-End eu não me ofericia para pegar, que foram as mais difícies nesse semestre e fiquei no conforto do Back-End. |
+| Paciência | Meu controle através de conflitos foi essencial para equipe, pois tivemos algumas intrigas por parte de alguns integrantes, minha paciência em não envolver com qualquer tipo de intriga foi relevante para não desestabilizar a equipe mais ainda.|
+
