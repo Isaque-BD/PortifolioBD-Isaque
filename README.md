@@ -746,7 +746,6 @@ Nesse semestre o foco principal da API foi na parte de desenvolvimento do Front 
 | PostgreSQL | ★★★★ | Autonomia |
 | GitHub | ★★★★ | Autonomia |
 | Vue | ★★☆☆ | Entendi |
-| JavaFX | ★★★☆ | Sei fazer com ajuda |
 
 ### Soft Skills
 
