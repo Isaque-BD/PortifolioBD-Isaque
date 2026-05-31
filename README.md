@@ -754,3 +754,42 @@ Nesse semestre o foco principal da API foi na parte de desenvolvimento do Front 
 | Proatividade | Durante a API eu poderia ser mais proativo na realização das issues, mas como meu receio era muito grande por ser tasks relacionadas a Front-End eu não me ofericia para pegar, que foram as mais difícies nesse semestre e fiquei no conforto do Back-End. |
 | Paciência | Meu controle através de conflitos foi essencial para equipe, pois tivemos algumas intrigas por parte de alguns integrantes, minha paciência em não envolver com qualquer tipo de intriga foi relevante para não desestabilizar a equipe mais ainda.|
 
+## 5º Semestre · 2/2025
+
+## 🎯 Desafio Proposto
+ 
+**Tema:** Necto — Jibóia, Sistema de ETL para Dados do Jira
+ 
+A empresa **Necto** nos desafiou a criar uma ferramenta analítica que consumisse dados diretamente pela API do Jira, consolidando-os em um data warehouse para geração de indicadores, dashboards e boards sobre o andamento de projetos.
+ 
+O desafio estava em transformar dados brutos e dispersos do Jira em métricas úteis e estruturadas, dando visibilidade sobre o andamento, esforço e performance das equipes de forma centralizada.
+ 
+---
+ 
+## 💡 Solução Desenvolvida
+ 
+Desenvolvemos o **Jibóia**, um sistema de ETL que extrai dados da API do Jira, transforma as informações brutas e as carrega em um data warehouse, permitindo a geração de dashboards detalhados tanto em nível de projetos quanto de issues.
+ 
+O sistema conta com controle de acesso por perfil de usuário — gerente, líder e membro de equipe — cada um com permissões condizentes com seu cargo.
+ 
+### Funcionalidades entregues
+ 
+Ao longo das três sprints, o sistema evoluiu progressivamente:
+ 
+- **Sprint 1** — Listagem de projetos com nome, datas e quantidade de issues, visualização de horas registradas por projeto e dashboard inicial com métricas agregadas
+- **Sprint 2** — Listagem de issues com autor, ID e data de criação, tempo gasto e data de início por issue, cadastro de usuários e autenticação com controle de permissões por cargo
+- **Sprint 3** — Dashboard com membros ativos e horas trabalhadas, filtros por data e membro, taxa de conclusão de issues, tempo médio de resolução e cálculo do valor total de horas gastas por projeto
+### Diferenciais da solução
+ 
+O principal diferencial foi a camada de **ETL integrada à API do Jira**: os dados eram extraídos automaticamente, tratados e armazenados no data warehouse, eliminando a necessidade de exportações manuais. Isso permitiu que gestores e líderes acompanhassem o andamento dos projetos em tempo real, com métricas de custo e produtividade por desenvolvedor.
+ 
+---
+ 
+## Tecnologias Utilizadas
+ 
+- **Java** — Toda a lógica do back-end e processo de ETL
+- **PostgreSQL** — Data warehouse para armazenamento e consolidação dos dados
+- **Vue.js** — Interface para interação do usuário e visualização dos dashboards
+- **GitHub** — Versionamento do projeto
+- **Maven** — Gerenciamento de dependências
+
