@@ -23,6 +23,7 @@ Java · Spring Boot · SQL
 | [2º Semestre](#2º-semestre--12024) | 2024 | Análise de Climas de Regiões |
 | [3º Semestre](#3º-semestre--22024) | 2024 | GSW Soluções Integradas |
 | [4º Semestre](#4º-semestre--12025) | 2025 | Visiona — Editor de Polígonos Geoespaciais|
+| [5º Semestre](#5º-semestre--22025) | 2025 | Necto |
 ---
 ## 1º Semestre · 2/2023
 
@@ -478,7 +479,7 @@ Compreendi melhor os conceitos de Orientação objeto ao ponto de ter uma melhor
 
 | Tecnologia/Metodologia | Nota | Classificação |
 |------------------------|------|---------------|
-| Java | ★★★★ | Autonomia |
+| Java | ★★★☆ | Sei fazer com ajuda |
 | MySQL | ★★★★ | Autonomia |
 | Vue | ★★☆☆ | Entendi |
 | GitHub | ★★★★ | Autonomia |
@@ -742,7 +743,7 @@ Nesse semestre o foco principal da API foi na parte de desenvolvimento do Front 
 ### Hard Skills
 | Tecnologia/Metodologia | Nota | Classificação |
 |------------------------|------|---------------|
-| Java | ★★★★ | Autonomia |
+| Java | ★★★☆ | Sei fazer com ajuda |
 | PostgreSQL | ★★★★ | Autonomia |
 | GitHub | ★★★★ | Autonomia |
 | Vue | ★★☆☆ | Entendi |
@@ -757,39 +758,96 @@ Nesse semestre o foco principal da API foi na parte de desenvolvimento do Front 
 ## 5º Semestre · 2/2025
 
 ## 🎯 Desafio Proposto
- 
+
 **Tema:** Necto — Jibóia, Sistema de ETL para Dados do Jira
- 
+
 A empresa **Necto** nos desafiou a criar uma ferramenta analítica que consumisse dados diretamente pela API do Jira, consolidando-os em um data warehouse para geração de indicadores, dashboards e boards sobre o andamento de projetos.
- 
+
 O desafio estava em transformar dados brutos e dispersos do Jira em métricas úteis e estruturadas, dando visibilidade sobre o andamento, esforço e performance das equipes de forma centralizada.
- 
+
 ---
- 
+
 ## 💡 Solução Desenvolvida
- 
+
 Desenvolvemos o **Jibóia**, um sistema de ETL que extrai dados da API do Jira, transforma as informações brutas e as carrega em um data warehouse, permitindo a geração de dashboards detalhados tanto em nível de projetos quanto de issues.
- 
+
 O sistema conta com controle de acesso por perfil de usuário — gerente, líder e membro de equipe — cada um com permissões condizentes com seu cargo.
- 
+
 ### Funcionalidades entregues
- 
+
 Ao longo das três sprints, o sistema evoluiu progressivamente:
- 
+
 - **Sprint 1** — Listagem de projetos com nome, datas e quantidade de issues, visualização de horas registradas por projeto e dashboard inicial com métricas agregadas
 - **Sprint 2** — Listagem de issues com autor, ID e data de criação, tempo gasto e data de início por issue, cadastro de usuários e autenticação com controle de permissões por cargo
 - **Sprint 3** — Dashboard com membros ativos e horas trabalhadas, filtros por data e membro, taxa de conclusão de issues, tempo médio de resolução e cálculo do valor total de horas gastas por projeto
-### Diferenciais da solução
- 
-O principal diferencial foi a camada de **ETL integrada à API do Jira**: os dados eram extraídos automaticamente, tratados e armazenados no data warehouse, eliminando a necessidade de exportações manuais. Isso permitiu que gestores e líderes acompanhassem o andamento dos projetos em tempo real, com métricas de custo e produtividade por desenvolvedor.
- 
----
- 
-## Tecnologias Utilizadas
- 
-- **Java** — Toda a lógica do back-end e processo de ETL
-- **PostgreSQL** — Data warehouse para armazenamento e consolidação dos dados
-- **Vue.js** — Interface para interação do usuário e visualização dos dashboards
-- **GitHub** — Versionamento do projeto
-- **Maven** — Gerenciamento de dependências
 
+### Diferenciais da solução
+
+O principal diferencial foi a camada de **ETL integrada à API do Jira**: os dados eram extraídos automaticamente, tratados e armazenados no data warehouse, eliminando a necessidade de exportações manuais. Isso permitiu que gestores e líderes acompanhassem o andamento dos projetos em tempo real, com métricas de custo e produtividade por desenvolvedor.
+
+---
+
+
+**Repositório:** [Jibóia — Necto](https://github.com/Isaque-BD/FATEC-API-5-SEMESTRE)
+
+## Tecnologias Utilizadas
+
+- **Python** — Desenvolvimento da lógica de ETL e processamento dos dados
+- **TypeScript** — Tipagem estática no front-end
+- **Vue.js** — Interface para interação do usuário e visualização dos dashboards
+- **Jira** — Fonte dos dados consumidos via API
+- **GitHub** — Versionamento do projeto
+- **Figma** — Prototipação das interfaces
+- **Amazon AWS** — Infraestrutura de cloud para deploy e armazenamento
+- **PostgreSQL** — Data warehouse para armazenamento e consolidação dos dados
+- **Django** — Framework back-end para a API REST
+- **Docker** — Containerização e padronização do ambiente
+- **DBeaver** — Gerenciamento e consulta do banco de dados
+
+---
+
+## Contribuições Pessoais
+
+<details>
+<summary>Título da contribuição</summary>
+
+Descrição da contribuição — explique o que foi implementado, qual problema resolve e como funciona.
+
+```java
+// Cole aqui o trecho de código relevante
+```
+
+</details>
+
+---
+
+## Aprendizados Efetivos
+
+Neste semestre atuei pela primeira vez como **Scrum Master**, cargo que assumi por decisão da equipe mesmo não sendo meu perfil natural. Foi um desafio significativo: além das dificuldades técnicas com Python e MongoDB, enfrentei obstáculos na gestão de pessoas, na garantia das entregas e no entendimento do produto. Um fator externo também impactou o ritmo da equipe — o delay para receber acesso à API do Jira, o que atrasou a análise dos dados e a definição dos indicadores.
+ 
+Na segunda sprint, cedi o cargo de SM para atuar como desenvolvedor, o que me permitiu focar nas entregas técnicas. Com as tecnologias já mais dominadas, o time evoluiu bem — até percebermos que a escolha do MongoDB havia sido um erro: não consultamos o cliente sobre o banco utilizado no ambiente deles, o que resultou na fusão com a equipe Jibóia. Nessa integração, fiquei responsável pela parte de **Migrations**, que gerencia as mudanças na base de dados. Tive dificuldades de entendimento sobre o que deveria ser feito, o que limitou minha contribuição nessa frente. 
+
+Do ponto de vista técnico, os maiores aprendizados foram o contato com o **Docker** - ferramenta que elimina a dependência de configurações locais ao rodar o projeto em um ambiente virtualizado - e a modelagem de **Data Warehouse**, onde aprendi os conceitos de **Start Shcema** e **Snowflake Schema**. O Snowflake se destaca pela estrutura totalmente normalizada, facilitando manutenção e mudanças a logo prazo, mas com desempenho inferior devido ao alto número de joins. Já o Star Schema é otimizado para consultas em grandes volumes de dados justamente por minimizar os joins
+
+## Hard Skills
+
+| Tecnologia/Metodologia | Nota | Classificação |
+|---|---|---|
+| Python | ★★★☆ | Sei fazer com ajuda |
+| TypeScript | ★☆☆☆ | Ouvi falar |
+| Vue.js | ★★☆☆ | Entendi |
+| Django | ★★★☆ | Sei fazer com ajuda |
+| PostgreSQL | ★★★★ | Autonomia |
+| Docker | ★★★☆ | Sei fazer com ajuda |
+| GitHub | ★★★★ | Autonomia |
+
+---
+
+## Soft Skills
+
+| Habilidade | Descrição |
+|---|---|
+| Comunicação | Atuando como Scrum Master na primeira sprint, precisei me comunicar com a equipe para alinhar entregas e gerenciar dificuldades técnicas e de produto. Foi um desafio, pois gestão de pessoas não é meu perfil natural, mas foi uma experiência importante para desenvolver essa habilidade. |
+| Trabalho em equipe | Na segunda sprint, a equipe se fundiu com a Jibóia após identificarmos que a escolha do MongoDB foi inadequada para o ambiente do cliente. Essa integração exigiu adaptação rápida e colaboração com pessoas de fora do time original. |
+| Proatividade | Ao perceber que o cargo de SM não estava rendendo os resultados esperados, tomei a iniciativa de ceder a posição para atuar como desenvolvedor, contribuindo de forma mais efetiva para as entregas técnicas da equipe. |
+| Resolução de problemas | Diante das dificuldades com as Migrations, busquei entender melhor o que deveria ser feito, mesmo sem muito sucesso na entrega. A situação evidenciou a importância de validar decisões técnicas com o cliente desde o início, como a escolha do banco de dados. |
