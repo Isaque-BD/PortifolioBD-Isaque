@@ -809,17 +809,59 @@ O principal diferencial foi a camada de **ETL integrada à API do Jira**: os dad
 ## Contribuições Pessoais
 
 <details>
-<summary>Título da contribuição</summary>
-
-Descrição da contribuição — explique o que foi implementado, qual problema resolve e como funciona.
-
-```java
-// Cole aqui o trecho de código relevante
-```
+<summary>Modelagem do Data Warehouse</summary>
+Desenvolvi a modelagem do Data Warehouse do projeto seguindo o esquema **Star Schema**, com uma tabela fato central e quatro dimensões ao redor.
+ 
+A tabela `Fato_Projeto` centraliza as métricas principais — tempo gasto, quantidade de issues e as chaves estrangeiras para as dimensões. As dimensões modeladas foram:
+ 
+- **Dim_Projeto** — armazena o id, chave e nome do projeto no Jira
+- **Dim_Usuário** — armazena o `account_id` e o nome de exibição do usuário
+- **Dim_Data** — armazena a data de criação (`jira_created_at`), data de início e fim
+- **Dim_issue** — armazena o id e a chave da issue, relacionada ao projeto
+- **Dim_detalhes_issues** — detalha cada registro de trabalho por issue, com nome do autor, data e tempo gasto em segundos
+<img width="800" height="423" alt="image" src="https://github.com/user-attachments/assets/ba378e0b-fe81-4d6e-84fa-97ae6087e49c" />
 
 </details>
+<details>
+<summary>Métrica de quantidade de issues por projeto</summary>
+Implementei o endpoint que retorna a quantidade de issues agrupadas por projeto, consultando diretamente o MongoDB via agregação. O endpoint foi registrado no `urls.py` e exposto via GET:
+ 
+```
+GET /project/count_issues_grouped_by_project
+```
+ 
+</details>
+<details>
+<summary>Métrica de quantidade de issues por usuário e horas totais</summary>
+Implementei o endpoint que retorna, para cada usuário, a quantidade de issues trabalhadas e o total de minutos gastos, utilizando um pipeline de agregação no MongoDB com `$unwind`, `$group` e `$sort`:
+ 
+```python
+def count_issues_by_user_and_total_hours(request):
+    pipeline = [
+        { "$unwind": "$issues" },
+        { "$unwind": "$issues.author_logs" },
+        {
+            "$group": {
+                "_id": "$issues.author_logs.display_name",
+                "issue_count": { "$sum": 1 },
+                "total_time_spent_minutes": {
+                    "$sum": { "$divide": ["$issues.author_logs.time_spent_seconds", 60] }
+                }
+            }
+        },
+        { "$sort": { "total_time_spent_minutes": -1 } }
+    ]
+ 
+    results = list(project_collections.aggregate(pipeline))
+    formatted = [
+        { "nome": r["_id"], "quantidade_issues": r["issue_count"], "total_horas": round(r["total_time_spent_minutes"], 2) }
+        for r in results
+    ]
+    return JsonResponse(formatted, safe=False)
+```
+ 
+</details>
 
----
 
 ## Aprendizados Efetivos
 
