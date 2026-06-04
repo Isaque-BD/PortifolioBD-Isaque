@@ -928,7 +928,7 @@ A camada de **predição** — identificando tendências e seções com maior pr
 
 **Repositório:** [Thunderstone — Tecsys](https://github.com/Isaque-BD/FATEC-API-6-SEMESTRE)
 
-## 🔖 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **FastAPI** — Framework back-end para a API REST
 - **Vue.js** — Interface para interação do usuário e visualização dos dashboards
@@ -942,7 +942,7 @@ A camada de **predição** — identificando tendências e seções com maior pr
 
 ---
 
-## 👤 Contribuições Pessoais
+## Contribuições Pessoais
 
 <details>
 <summary>Título da contribuição</summary>
@@ -957,13 +957,13 @@ Descrição da contribuição — explique o que foi implementado, qual problema
 
 ---
 
-## 📖 Aprendizados Efetivos
+## Aprendizados Efetivos
 
 Descreva aqui os principais aprendizados do semestre — o que você aprendeu de novo, o que evoluiu em relação aos semestres anteriores e quais desafios foram superados.
 
 ---
 
-## 🧠 Hard Skills
+## Hard Skills
 
 | Tecnologia/Metodologia | Nota | Classificação |
 |---|---|---|
@@ -977,7 +977,7 @@ Descreva aqui os principais aprendizados do semestre — o que você aprendeu de
 
 ---
 
-## 🤝 Soft Skills
+## Soft Skills
 
 | Habilidade | Descrição |
 |---|---|
