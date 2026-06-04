@@ -23,7 +23,8 @@ Java · Spring Boot · SQL
 | [2º Semestre](#2º-semestre--12024) | 2024 | Análise de Climas de Regiões |
 | [3º Semestre](#3º-semestre--22024) | 2024 | GSW Soluções Integradas |
 | [4º Semestre](#4º-semestre--12025) | 2025 | Visiona — Editor de Polígonos Geoespaciais|
-| [5º Semestre](#5º-semestre--22025) | 2025 | Necto |
+| [5º Semestre](#5º-semestre--22025) | 2025 | Necto - Dashboards com base na API do JIRA|
+| [6º Semestre](#6º-semestre--12026) | 2026 | Tecsys - Relatórios de Energia Elétrica (ANEEL) |
 ---
 ## 1º Semestre · 2/2023
 
@@ -945,13 +946,64 @@ A camada de **predição** — identificando tendências e seções com maior pr
 ## Contribuições Pessoais
 
 <details>
-<summary>Título da contribuição</summary>
-
-Descrição da contribuição — explique o que foi implementado, qual problema resolve e como funciona.
-
+<summary>Endpoint de cálculo de Perdas Técnicas e Não Técnicas (PT/PNT)</summary>
+Implementei o endpoint e a lógica de cálculo das perdas técnicas (PT) e não técnicas (PNT) por conjunto elétrico, cruzando dados de três coleções do MongoDB: `circuitos_mt`, `conjuntos` e `segmentos_mt_tabular`.
+ 
+O cálculo percorre os segmentos de média tensão para mapear quais circuitos pertencem a cada conjunto, acumula as perdas por coluna e converte os valores de kWh para MWh. O resultado é ordenado pelo volume de PNT e retorna o percentual de cada tipo de perda sobre o total:
+ 
 ```python
-# Cole aqui o trecho de código relevante
+def calculate_pt_pnt(job_id: str) -> list[dict]:
+    # Carrega CTMT, CONJ e SSDMT do MongoDB
+    # Mapeia circuitos -> conjuntos via segmentos de MT
+    # Acumula PT, PNT e energia injetada por conjunto
+    results.append({
+        'conjunto': name_by_conj.get(conj_cod, conj_cod),
+        'pt_mwh': round(pt_mwh, 4),
+        'pnt_mwh': round(pnt_mwh, 4),
+        'energia_injetada_mwh': round(ene_mwh, 4),
+        'pct_pt': round(pct_pt, 4) if pct_pt is not None else None,
+        'pct_pnt': round(pct_pnt, 4) if pct_pnt is not None else None,
+    })
 ```
+ 
+O endpoint foi registrado no `app.py` e exposto via GET:
+ 
+```
+GET /pt-pnt?job_id={job_id}
+```
+ 
+</details>
+<details>
+<summary>Task Celery de renderização do gráfico PT/PNT</summary>
+Implementei a task Celery `etl.render_pt_pnt` responsável por gerar e salvar o gráfico de barras comparando as perdas técnicas e não técnicas por conjunto elétrico. A task foi integrada ao fluxo do `trigger_pipeline_flow`, executando automaticamente após o cálculo do PT/PNT.
+ 
+O gráfico é gerado com **Matplotlib** e salvo como PNG em `output/images`, com o nome no formato `pt_pnt_{sig_agente}_{ano}.png`:
+ <img width="2085" height="4908" alt="image" src="https://github.com/user-attachments/assets/ffb72178-9797-4f28-a3bd-7e24b21d2da1" />
+
+
+ 
+</details>
+<details>
+<summary>Renderização do gráfico SAM no pipeline</summary>
+Implementei a renderização do gráfico de **SAM** (Score de Adequação de Mercado) — gráfico de barras ordenado pelos conjuntos com maior score — integrando a task ao pipeline de geração automática de relatórios. O gráfico inclui data labels nas barras para facilitar a leitura dos valores:
+ 
+<img width="2083" height="3587" alt="image" src="https://github.com/user-attachments/assets/b9151149-e505-4b53-aba0-9b5d527f5a56" />
+
+ 
+</details>
+<details>
+<summary>Implementação do modelo de Machine Learning (Prophet)</summary>
+Responsável pelo treinamento e integração do modelo de **Machine Learning preditivo** ao projeto. Utilizei o **Prophet** (biblioteca de séries temporais do Meta) para identificar padrões históricos nas métricas de **DEC** e **FEC** e gerar previsões para 1 ano à frente.
+ 
+Os modelos treinados foram serializados em arquivos `.pkl` e adicionados ao repositório na pasta `backend/models`:
+ 
+- `prophet_models.pkl` — modelos treinados por conjunto elétrico
+- `prophet_forecasts.pkl` — previsões geradas
+- `df_hierarchical_agg.pkl` — dados históricos agregados hierarquicamente
+O notebook de análise e treinamento foi disponibilizado na pasta `colabs/Análise_Temporal_DEC_e_FEC.ipynb`.
+
+<img width="710" height="381" alt="image" src="https://github.com/user-attachments/assets/4ea342f3-fbad-4707-bcb3-152029d8cdaa" />
+<img width="698" height="389" alt="image" src="https://github.com/user-attachments/assets/a217b194-7e70-46ff-aa6b-545a7be733c2" />
 
 </details>
 
@@ -959,7 +1011,13 @@ Descrição da contribuição — explique o que foi implementado, qual problema
 
 ## Aprendizados Efetivos
 
-Descreva aqui os principais aprendizados do semestre — o que você aprendeu de novo, o que evoluiu em relação aos semestres anteriores e quais desafios foram superados.
+Este foi um dos semestres mais desafiadores e enriquecedores da minha trajetória, principalmente pelo volume massivo de dados da ANEEL e pela necessidade de interpretá-los para gerar métricas relevantes ao cliente.
+
+Um dos principais aprendizados foi o desenvolvimento de um modelo de Machine Learning para predição temporal. Aprendi a criar um modelo próprio que, com base em dados históricos, identifica padrões e projeta valores para até 1 ano à frente. No projeto, esse modelo foi aplicado às métricas de DEC (Duração Equivalente de Interrupção por Unidade Consumidora) e FEC (Frequência Equivalente de Interrupção por Unidade Consumidora), indicadores regulatórios que medem a qualidade do fornecimento de energia elétrica. Todos os dados utilizados foram coletados diretamente do portal da ANEEL (Agência Nacional de Energia Elétrica).
+
+Outro aprendizado relevante foi a LGPD (Lei Geral de Proteção de Dados) e sua aplicação prática em projetos de software. Como o sistema lida com dados pessoais, foi necessário garantir transparência sobre quais dados são coletados, com qual finalidade e de que forma são utilizados, além de disponibilizar ao usuário a opção de aceitar ou recusar os termos de uso. Esse processo demonstrou a importância da responsabilidade dos desenvolvedores na criação de soluções alinhadas às exigências legais e à proteção da privacidade dos usuários.
+
+Por fim, aprendi técnicas de ETL (Extract, Transform and Load) voltadas para o processamento de grandes volumes de dados. Com tabelas contendo milhões de registros, a estratégia tradicional de carregamento se mostrou inviável devido ao elevado consumo de memória e tempo de execução. Para contornar esse problema, foi utilizada a técnica de processamento por chunks, que consiste em dividir os dados em lotes menores, processar cada lote individualmente e persistir os resultados de forma incremental. Essa abordagem reduziu significativamente o consumo de recursos da aplicação e tornou o processo de carga mais eficiente e escalável.
 
 ---
 
@@ -967,13 +1025,13 @@ Descreva aqui os principais aprendizados do semestre — o que você aprendeu de
 
 | Tecnologia/Metodologia | Nota | Classificação |
 |---|---|---|
-| FastAPI | ★★★☆☆ | Entendi |
-| Vue.js | ★★★☆☆ | Entendi |
-| MongoDB | ★★★☆☆ | Entendi |
-| PostgreSQL | ★★★★☆ | Autonomia |
-| Celery | ★★★☆☆ | Entendi |
-| Redis | ★★★☆☆ | Entendi |
-| GitHub | ★★★★☆ | Autonomia |
+| FastAPI | ★★★☆ | Sei fazer com ajuda |
+| Vue.js | ★★☆☆ | Entendi |
+| MongoDB | ★★☆☆ | Sei fazer com ajuda |
+| PostgreSQL | ★★★★ | Autonomia |
+| Celery | ★★★☆ | Sei fazer com ajuda |
+| Redis | ★★☆☆ | Entendi |
+| GitHub | ★★★★ | Autonomia |
 
 ---
 
@@ -981,7 +1039,6 @@ Descreva aqui os principais aprendizados do semestre — o que você aprendeu de
 
 | Habilidade | Descrição |
 |---|---|
-| Comunicação | Descreva como foi a comunicação no time durante o semestre. |
-| Trabalho em equipe | Descreva como foi a colaboração entre os membros. |
-| Proatividade | Descreva situações em que tomou iniciativa. |
-| Resolução de problemas | Descreva como lidou com os desafios técnicos e de equipe. |
+| Comunicação | Sinto que eu melhorei bastante minha comunicação com o grupo, já que já tinhamos trabalhado antes, então minha comunicação foi bem mais fluída no decorrer desse semestre |
+| Trabalho em equipe | O desenvolviemnto da equipe foi uma ótima experiência todos contribuiram e foram muito proativo para conseguir realizar as entregas de cada Sprint. |
+| Proatividade | Tomei como iniciativa o desenvolvimento do Machine Learning no projeto. |
