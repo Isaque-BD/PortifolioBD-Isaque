@@ -893,3 +893,95 @@ Do ponto de vista técnico, os maiores aprendizados foram o contato com o **Dock
 | Trabalho em equipe | Na segunda sprint, a equipe se fundiu com a Jibóia após identificarmos que a escolha do MongoDB foi inadequada para o ambiente do cliente. Essa integração exigiu adaptação rápida e colaboração com pessoas de fora do time original. |
 | Proatividade | Ao perceber que o cargo de SM não estava rendendo os resultados esperados, tomei a iniciativa de ceder a posição para atuar como desenvolvedor, contribuindo de forma mais efetiva para as entregas técnicas da equipe. |
 | Resolução de problemas | Diante das dificuldades com as Migrations, busquei entender melhor o que deveria ser feito, mesmo sem muito sucesso na entrega. A situação evidenciou a importância de validar decisões técnicas com o cliente desde o início, como a escolha do banco de dados. |
+
+## 6º Semestre · 1/2026
+
+## 🎯 Desafio Proposto
+
+**Tema:** Thunderstone — Dimensionamento do Sistema de Distribuição de Energia
+
+A empresa **Tecsys** nos desafiou a dimensionar o sistema de distribuição de energia para viabilizar a expansão de suas tecnologias de telemetria. O principal obstáculo a ser superado era a padronização dos cálculos e a alta complexidade no tratamento do grande volume de dados da ANEEL.
+
+O desafio estava em transformar dados massivos e não estruturados em visualizações estratégicas que permitissem identificar geograficamente as seções mais críticas da rede elétrica.
+
+---
+
+## 💡 Solução Desenvolvida
+
+Desenvolvemos uma plataforma capaz de processar os dados massivos e não estruturados da ANEEL, padronizando o cálculo de perdas e traduzindo essas informações em visualizações estratégicas — como heatmaps e rankings — que destacam geograficamente as seções mais críticas da rede de distribuição.
+
+### Funcionalidades entregues
+
+Ao longo das três sprints, o sistema evoluiu progressivamente:
+
+- **Sprint 1** — Ranking de Índice de Criticidade por conjunto elétrico, gráfico de barras por score SAM, gráfico de perdas técnicas e não técnicas (PT/PNT) e ranking dos 10 conjuntos com maior extensão de média tensão (TAM)
+- **Sprint 2** — Heatmap georeferenciado por Índice de Criticidade, geração automática de análise por distribuidora, exportação de relatório PDF consolidado e autenticação com controle de acesso por credenciais corporativas, além de envio do relatório por e-mail
+- **Sprint 3** — Conformidade com LGPD, histórico de auditoria de acessos e ações na plataforma, e predição de seções com maior risco de falhas e multas futuras
+
+### Diferenciais da solução
+
+O principal diferencial foi a **geração automatizada de relatórios PDF**: ao selecionar uma distribuidora, o sistema processa todos os indicadores e entrega o material de apresentação pronto, sem nenhuma ação manual. Isso permite que consultores de vendas foquem na abordagem comercial sem depender de suporte técnico.
+
+A camada de **predição** — identificando tendências e seções com maior probabilidade de falhas futuras — posicionou a solução como uma ferramenta estratégica para venda preventiva de sensores inteligentes.
+
+---
+
+**Repositório:** [Thunderstone — Tecsys](https://github.com/Isaque-BD/FATEC-API-6-SEMESTRE)
+
+## 🔖 Tecnologias Utilizadas
+
+- **FastAPI** — Framework back-end para a API REST
+- **Vue.js** — Interface para interação do usuário e visualização dos dashboards
+- **MongoDB** — Armazenamento dos dados brutos da ANEEL
+- **PostgreSQL** — Banco de dados relacional para dados estruturados
+- **Celery** — Processamento assíncrono de tarefas pesadas
+- **Redis** — Broker de mensagens para o Celery
+- **DBeaver** — Gerenciamento e consulta do banco de dados
+- **Google Colab** — Experimentação e análise exploratória dos dados
+- **GitHub** — Versionamento do projeto
+
+---
+
+## 👤 Contribuições Pessoais
+
+<details>
+<summary>Título da contribuição</summary>
+
+Descrição da contribuição — explique o que foi implementado, qual problema resolve e como funciona.
+
+```python
+# Cole aqui o trecho de código relevante
+```
+
+</details>
+
+---
+
+## 📖 Aprendizados Efetivos
+
+Descreva aqui os principais aprendizados do semestre — o que você aprendeu de novo, o que evoluiu em relação aos semestres anteriores e quais desafios foram superados.
+
+---
+
+## 🧠 Hard Skills
+
+| Tecnologia/Metodologia | Nota | Classificação |
+|---|---|---|
+| FastAPI | ★★★☆☆ | Entendi |
+| Vue.js | ★★★☆☆ | Entendi |
+| MongoDB | ★★★☆☆ | Entendi |
+| PostgreSQL | ★★★★☆ | Autonomia |
+| Celery | ★★★☆☆ | Entendi |
+| Redis | ★★★☆☆ | Entendi |
+| GitHub | ★★★★☆ | Autonomia |
+
+---
+
+## 🤝 Soft Skills
+
+| Habilidade | Descrição |
+|---|---|
+| Comunicação | Descreva como foi a comunicação no time durante o semestre. |
+| Trabalho em equipe | Descreva como foi a colaboração entre os membros. |
+| Proatividade | Descreva situações em que tomou iniciativa. |
+| Resolução de problemas | Descreva como lidou com os desafios técnicos e de equipe. |
