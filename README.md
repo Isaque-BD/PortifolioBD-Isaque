@@ -185,7 +185,7 @@ Neste semestre tive meu primeiro contato com desenvolvimento de software, utiliz
 | Tecnologia/Metodologia | Nota | Classificação |
 |------------------------|------|---------------|
 | Python | ★★★☆ | Sei fazer com ajuda |
-| GitHub | ★★★★ | Autonomia |
+| GitHub | ★★★☆| Sei fazer com ajuda |
 
 ### Soft Skills
 
