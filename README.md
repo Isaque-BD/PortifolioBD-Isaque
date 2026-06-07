@@ -985,7 +985,7 @@ O gráfico é gerado com **Matplotlib** e salvo como PNG em `output/images`, com
 </details>
 <details>
 <summary>Renderização do gráfico SAM no pipeline</summary>
-Implementei a renderização do gráfico de **SAM** (Score de Adequação de Mercado) — gráfico de barras ordenado pelos conjuntos com maior score — integrando a task ao pipeline de geração automática de relatórios. O gráfico inclui data labels nas barras para facilitar a leitura dos valores:
+Implementei a renderização do gráfico de SAM (Score de Adequação de Mercado) — gráfico de barras ordenado pelos conjuntos com maior score — integrando a task ao pipeline de geração automática de relatórios. O gráfico inclui data labels nas barras para facilitar a leitura dos valores:
  
 <img width="2083" height="3587" alt="image" src="https://github.com/user-attachments/assets/b9151149-e505-4b53-aba0-9b5d527f5a56" />
 
@@ -993,7 +993,7 @@ Implementei a renderização do gráfico de **SAM** (Score de Adequação de Mer
 </details>
 <details>
 <summary>Implementação do modelo de Machine Learning (Prophet)</summary>
-Responsável pelo treinamento e integração do modelo de **Machine Learning preditivo** ao projeto. Utilizei o **Prophet** (biblioteca de séries temporais do Meta) para identificar padrões históricos nas métricas de **DEC** e **FEC** e gerar previsões para 1 ano à frente.
+Responsável pelo treinamento e integração do modelo de Machine Learning preditivo ao projeto. Utilizei o Prophet (biblioteca de séries temporais do Meta) para identificar padrões históricos nas métricas de DEC e FEC e gerar previsões para 1 ano à frente.
  
 Os modelos treinados foram serializados em arquivos `.pkl` e adicionados ao repositório na pasta `backend/models`:
  
