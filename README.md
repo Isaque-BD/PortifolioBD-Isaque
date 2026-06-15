@@ -1,4 +1,8 @@
 # Portfólio APIs — Banco de Dados · Isaque de Souza
+<div align="center">
+  <img width="419" height="590" alt="chrome_vXkbkoymkw" src="https://github.com/user-attachments/assets/e3e7bcd7-a72c-41d0-8da6-300e9a26ebb8" />
+
+</div>
 
 ## Introdução
 
