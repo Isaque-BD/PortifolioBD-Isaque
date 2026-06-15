@@ -18,7 +18,7 @@ Estou cursando Banco de Dados desde o segundo semestre de 2023 e atualmente atuo
 Java · Spring Boot · SQL
 
 ---
-
+<div id="menu"></div>
 ## Menu de Semestres
 
 | Semestre | Ano | Projeto |
@@ -199,6 +199,7 @@ Neste semestre tive meu primeiro contato com desenvolvimento de software, utiliz
 | Comunicação | Conflitos no grupo devido ao desbalanceamento na atuação prática de cada membro. |
 
 ---
+<p align="right"><a href="#menu">🔼 Voltar ao Menu de Semestres</a></p>
 
 ## 2º Semestre · 1/2024
 
