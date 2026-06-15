@@ -351,6 +351,7 @@ Aprendi a estrutura de um sistema simples de CRUD e como funciona a integração
 | Comunicação | Precisei me comunicar sobre minhas dificuldades ao longo do desenvolvimento. |
 
 ---
+<p align="right"><a href="#menu">🔼 Voltar ao Menu de Semestres</a></p>
 
 ## 3º Semestre · 2/2024
 
@@ -497,6 +498,8 @@ Compreendi melhor os conceitos de Orientação objeto ao ponto de ter uma melhor
 |------------|-----------|
 | Comunicação | Fui desenvolvendo ao longo do projeto, perdendo o receio de perguntar por dúvidas. |
 | Paciência | Mantive o controle em situações inesperadas sem me estressar, fundamental para o trabalho em equipe. |
+
+<p align="right"><a href="#menu">🔼 Voltar ao Menu de Semestres</a></p>
 
 ## 4º Semestre · 1/2025
 
@@ -762,6 +765,8 @@ Nesse semestre o foco principal da API foi na parte de desenvolvimento do Front 
 | Proatividade | Durante a API eu poderia ser mais proativo na realização das issues, mas como meu receio era muito grande por ser tasks relacionadas a Front-End eu não me ofericia para pegar, que foram as mais difícies nesse semestre e fiquei no conforto do Back-End. |
 | Paciência | Meu controle através de conflitos foi essencial para equipe, pois tivemos algumas intrigas por parte de alguns integrantes, minha paciência em não envolver com qualquer tipo de intriga foi relevante para não desestabilizar a equipe mais ainda.|
 
+<p align="right"><a href="#menu">🔼 Voltar ao Menu de Semestres</a></p>
+
 ## 5º Semestre · 2/2025
 
 ## 🎯 Desafio Proposto
@@ -900,6 +905,8 @@ Do ponto de vista técnico, os maiores aprendizados foram o contato com o **Dock
 | Trabalho em equipe | Na segunda sprint, a equipe se fundiu com a Jibóia após identificarmos que a escolha do MongoDB foi inadequada para o ambiente do cliente. Essa integração exigiu adaptação rápida e colaboração com pessoas de fora do time original. |
 | Proatividade | Ao perceber que o cargo de SM não estava rendendo os resultados esperados, tomei a iniciativa de ceder a posição para atuar como desenvolvedor, contribuindo de forma mais efetiva para as entregas técnicas da equipe. |
 | Resolução de problemas | Diante das dificuldades com as Migrations, busquei entender melhor o que deveria ser feito, mesmo sem muito sucesso na entrega. A situação evidenciou a importância de validar decisões técnicas com o cliente desde o início, como a escolha do banco de dados. |
+
+<p align="right"><a href="#menu">🔼 Voltar ao Menu de Semestres</a></p>
 
 ## 6º Semestre · 1/2026
 
@@ -1048,3 +1055,5 @@ Por fim, aprendi técnicas de ETL (Extract, Transform and Load) voltadas para o 
 | Comunicação | Sinto que eu melhorei bastante minha comunicação com o grupo, já que já tinhamos trabalhado antes, então minha comunicação foi bem mais fluída no decorrer desse semestre |
 | Trabalho em equipe | O desenvolviemnto da equipe foi uma ótima experiência todos contribuiram e foram muito proativo para conseguir realizar as entregas de cada Sprint. |
 | Proatividade | Tomei como iniciativa o desenvolvimento do Machine Learning no projeto. |
+
+<p align="right"><a href="#menu">🔼 Voltar ao Menu de Semestres</a></p>
